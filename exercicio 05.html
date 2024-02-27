@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 05</title>
+    <style>
+        body {
+            background-color: rgba(29,29,29,0.85);
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Utilize uma estrutura condicional (if,else) 
+        para verificar se um número é positivo, negativo ou zero.
+        Exiba os valores no console.log().
+    -->
+
+    <div>
+        <h1 style="color:white">Descobrir se o número é positivo, negativo ou é zero</h1>
+        <div>
+            Informe o valor do número: <input type="number" id="numero"/>
+        </div><br/>
+        
+        <button onclick="verificar()";>Verificar</button>
+    </div>
+    <div id="resultado"></div>
+    <script>
+        function verificar() {
+            const numero = document.getElementById('numero').value;
+            let resultado = '';
+            if (numero > 0) {
+                resultado = 'O número é positivo.';
+            } else if (numero < 0) {
+                resultado = 'O número é negativo.';
+            } else {
+                resultado = 'O número é zero.';
+            }
+            console.log(resultado)
+        }
+    </script>
+</body>
+</html>
