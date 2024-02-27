@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exercicio 06</title>
+    <title>exercicio 07</title>
     <style>
         body {
             background-color: rgba(29,29,29,0.85);
@@ -12,43 +12,28 @@
 </head>
 <body>
     <!--
-      Crie 3 objetos com propriedades representando informações pessoais
-       (nome, idade, nacionalidade e profissão)
-       e exiba essas informações com um console.log para cada objeto.
-    -->
-
-    <form id="formulario">
+        Crie uma função que receba o valor de uma hora qualquer,
+         e exibe no console uma mensagem de “bom dia”, “boa tarde” ou “boa noite”,
+         de acordo com a hora passada.
+      -->
+      <div>
         <div>
-            <label for="nome">Nome:</label>
-            <input type="text" id="inome" name="nome" required><br>
-            <label for="idade">Idade:</label>
-            <input type="number" id="iidade" name="idade" required min="13"><br>
-            <label for="nacionalidade">Nacionalidade:</label>
-            <select id="innacionalidade" name="nacionalidade">
-                <option value="brasileiro">Brasileiro(a)</option>
-                <option value="estrangeiro">Estrangeiro(a)</option>
-            </select>
-            <br>
-            <label for="profissao">Profissão:</label>
-            <input type="text" id="iprofissao" name="profissao"><br>
-            <button type="button" onclick="criarPessoa()">Criar Pessoa</button>
+            <h1>Informe a hora</h1>
+            <input type="time" id="hora" placeholder="Digite aqui..."/>
+            <button onclick="verificarHora()">Enviar</button>
         </div>
-        <div>           
             <script>
-                //Informações do primeiro usuário
-                function criarPessoa() {
-                    let snome = document.getElementById('inome').value;
-                    let sidade = document.getElementById('iidade').value;
-                    let snacionalidade = document.getElementById('innacionalidade').value;
-                    let sprofissao = document.getElementById('iprofissao').value;
-
-                    console.log("Nome: " + snome);
-                    console.log("Idade: " + sidade);
-                    console.log("Nacionalidade: " + snacionalidade);
-                    console.log("Profissão: " + sprofissao);
+                function verificarHora(){
+                    let hora = document.getElementById("hora").value;
+                    if (hora >=  6 && hora <= 12) {
+                        console.log(`Bom Dia! Agora são ${hora} horas.`);
+                    } else if (hora > 12 && hora <= 18) {
+                        console.log(`Boa Tarde! Agora são ${hora} horas.`);
+                    } else{
+                        console.log(`Boa Noite! Agora são ${hora} horas.`);
+                    }
                 }
             </script>
-        </div>
-    </form>
+      </div>
 </body>
 </html>
