@@ -25,9 +25,9 @@
         
         <button onclick="verificar()";>Verificar</button>
     </div>
-    <div>
-        <script>
-         function verificar() {
+    <div id="resultado"></div>
+    <script>
+        function verificar() {
             const numero = document.getElementById('numero').value;
             let resultado = '';
             if (numero > 0) {
@@ -38,8 +38,7 @@
                 resultado = 'O número é zero.';
             }
             console.log(resultado)
-         }
-        </script>
-    </div>
+        }
+    </script>
 </body>
 </html>
