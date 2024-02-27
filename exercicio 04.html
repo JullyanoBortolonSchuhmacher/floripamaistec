@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 04</title>
+    <style>
+        body {
+            background-color: rgba(29, 29, 29, 0.85);
+        }
+        h1 {
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <script>
+            function somadedoisnumeros () {
+                let num1 = 2;
+                let num2 = 25;
+                let soma = num1+num2;
+                console.log('A soma dos números é:', soma);
+                return soma;
+            }
+        </script>
+    </div>
+    <div>
+        <div>
+            <script>
+                //escolha dos numeros
+                function  selecaodenumeros() {
+                    let numb1 = parseInt(document.getElementById('numb1').value);
+                    let numb2 = parseInt(document.getElementById('numb2').value);
+                    let soma = numb1 + numb2;
+                    console.log(soma)  
+                }
+            </script>
+        </div>
+        <div>
+            <h1> Soma de dois números</h1>
+                <label for="numb1">Número 1:</label>
+                <input type="number" id="numb1" name="numb1">
+                <br>
+                <label for="numb2">Número 2:</label>
+                <input type="number" id="numb2" name="numb2">
+                <br>
+            <button onclick="selecaodenumeros()">Somar</button>
+        </div>
+    </div>
+</body>
+</html>
