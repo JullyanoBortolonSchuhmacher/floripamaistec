@@ -12,6 +12,7 @@
     position: relative;
     margin-bottom: 20px;
     margin-top: 50px; /* espaçamento entre a imagem e o header */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
 }
 
 .profile-image img {
@@ -61,10 +62,13 @@ nav li {
 
 
 .section {
-    border: 1px solid #ccc;
+    border: 0 solid #ccc;
     box-sizing: border-box;
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+    background: rgba(133, 132, 132, 0.875);
 }
 
 .nome {
