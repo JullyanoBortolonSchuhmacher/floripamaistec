@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 09</title>
+    <style>
+        body{
+            background-color: rgba(29,29,29,0.85);
+            margin:0;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button {
+            background-color:#27429bad;
+            border:none;
+            color: white;
+            padding:15px 32px;
+            text-align:center;
+            text-decoration:none;
+            display:inline-block;
+            font-size:16px;
+            margin:4px 2px;
+            cursor:pointer;
+            border-radius:12px;
+            box-shadow:0 5px 10px rgba(0,0,0,0.1);
+            transition:all 0.3s ease;
+        }
+        button:hover {
+            background-color:#2e7ba8ad;
+        }
+        h1{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Crie uma função que solicite para o usuário através do prompt de comando sua idade, 
+        e a partir da idade fornecida, exiba uma mensagem informando se ele é maior de idade ou não. 
+        Considere 18 anos como maior idade.
+    -->
+    <div>
+        <div id="botao">
+            <h1>Insira sua idade</h1>
+            <button onclick="verificarIdade()">Enviar idade</button>
+        </div>
+        <div id="alerta">
+            <script>
+                function verificarIdade() {
+                    var idade = prompt("Digite sua idade:");
+                    idade = parseInt(idade); 
+                    if (idade >= 18) {
+                        alert("Você é maior de idade.");
+                    } else {
+                        alert("Você não é maior de idade.");
+                    }
+                }
+            </script>
+        </div>
+    </div>    
+</body>
+</html>
