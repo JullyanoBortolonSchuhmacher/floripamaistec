@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 09</title>
+    <style>
+        body{
+            background-color: rgba(29,29,29,0.85);
+            margin:0;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button {
+            background-color:#27429bad;
+            border:none;
+            color: white;
+            padding:15px 32px;
+            text-align:center;
+            text-decoration:none;
+            display:inline-block;
+            font-size:16px;
+            margin:4px 2px;
+            cursor:pointer;
+            border-radius:12px;
+            box-shadow:0 5px 10px rgba(0,0,0,0.1);
+            transition:all 0.3s ease;
+        }
+
+        button:hover {
+            background-color:#2e7ba8ad;
+        }
+        h1{
+            color:white;
+
+        }
+    </style>
+    </head>
+<body>
+    <div>
+        <div>
+            <script>
+                function exibirMensagem(condicao) {
+                    let mensagem;
+                    switch (condicao) {
+                        case 1:
+                            mensagem = "A Fiat é uma montadora italiana com uma longa história. Ela é conhecida por seus carros compactos e econômicos. No Brasil, a Fiat tem uma forte presença e é popular por modelos como o Fiat Uno, Fiat Palio e Fiat Strada.";
+                            break;
+                        case 2:
+                            mensagem = "A Ford é uma montadora americana que desempenhou um papel significativo na popularização dos automóveis. Ela produz uma variedade de veículos, desde caminhonetes robustas como a Ford F-150 até carros esportivos como o Ford Mustang.";
+                            break;
+                        case 3:
+                            mensagem = "Toyota é uma montadora japonesa conhecida por sua confiabilidade e eficiência. Ela é dona da marca de luxo Lexus e também possui a Daihatsu. O Toyota Corolla é um dos carros mais vendidos globalmente.";
+                            break;
+                        case 4:
+                            mensagem = "Kia é uma montadora sul-coreana que se destacou nos últimos anos. Ela oferece uma variedade de modelos, incluindo SUVs como o Kia Sportage e carros elétricos como o Kia e-Niro.";
+                            break;
+                        case 5: 
+                            mensagem = "A Honda é outra montadora japonesa conhecida por sua qualidade e inovação. Seus carros são populares em todo o mundo, com modelos como o Honda Civic, Honda Accord e o híbrido Honda Insight.";
+                            break;
+                            default:
+                            mensagem = "Ocorreu algum erro, tente novamente :/";
+                    }
+                    return mensagem;
+                }
+            </script>
+        </div>
+        <div>
+            <h1>Selecione uma marca</h1>
+            <button onclick="alert(exibirMensagem(1))">Fiat</button>
+            <button onclick="alert(exibirMensagem(2))">Ford</button>
+            <button onclick="alert(exibirMensagem(3))">Toyota</button>
+            <button onclick="alert(exibirMensagem(4))">Kia</button>
+            <button onclick="alert(exibirMensagem(5))">Honda</button>
+        </div>
+    </div>
+    </body>
+</html>
