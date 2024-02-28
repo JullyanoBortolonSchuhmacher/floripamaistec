@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 08</title>
+    <style>
+        body{
+            background-color: rgba(29,29,29,0.75);
+            margin:0;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            color: white;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        button {
+            background-color:#1f5220;
+            border:none;
+            color: white;
+            padding:15px 32px;
+            text-align:center;
+            text-decoration:none;
+            display:inline-block;
+            font-size:16px;
+            margin:4px 2px;
+            cursor:pointer;
+            border-radius:12px;
+            box-shadow:0 5px 10px rgba(0,0,0,0.1);
+            transition:all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+        form {
+            width: 100%;
+            max-width: 300px
+        }
+    </style>
+</head>
+<body>
+    <!--Descobrir se o número é par ou impar-->
+    <div>
+        <div>
+            <h1> Informe o número</h1>
+            <label  for="numero">Digite um número:</label><br/>
+            <input type="number" id="numero"/><br/><br/>
+            <button onclick="verificarParOuImpar()">Verificar</button><br/><br/>
+            <h1 id="resultado"></h1>
+            <div class="resultado">
+            <h1 id="display-im/par"></h1>
+            </div>
+        </div>
+        <script>
+            function verificarParOuImpar(){
+                var numero = document.getElementById("numero").value;
+                if (numero %  2 == 0){
+                    let ifresultado = `O número ${numero} é par`;
+                    console.log(ifresultado)
+                    document.getElementById("display-im/par").innerHTML= 'Este número é par!';
+                } else{
+                    let ifresultado = `O número ${numero} é impar!`;
+                    console.log(ifresultado)
+                    document.getElementById("display-im/par").innerHTML= 'Este número é impar!';
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
