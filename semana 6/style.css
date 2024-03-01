@@ -1,83 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    color: wheat;
+    background: rgb(231,0,51);
+    background: linear-gradient(289deg,  rgb(197, 37, 72) 0%, rgb(84, 51, 167) 100%);
+}
+/* Blocos*/
+.section {
+    border: 0 solid rgba(0,0,0,0.55);
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+    background: rgba(43, 42, 42, 0.212);
+}   
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.profile-image {
+/* Imagem*/
+.imagem-perfil {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    border-color: white;
     overflow: hidden;
     position: relative;
     margin-bottom: 20px;
-    margin-top: 50px; /* espaçamento entre a imagem e o header */
-    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+    margin-top: 50px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
 }
 
-.profile-image img {
+.imagem-perfil img {
     width: 100%;
-    height: 100%;
+    height: 150%;
     object-fit: cover;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    color: wheat;
-    background-color: rgba(29,29,29,0.875);
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
+/* cabeçalho */
 header {
-    background-color: #333;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
     padding: 20px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.55) ;
 }
-
-nav {
+nav{
+    color:white;
     float: right;
 }
-
-nav ul {
+nav ul{
     list-style: none;
-    margin: 0;
-    padding: 0;
-}
+    margin: 0px;
+    padding: 0px;
 
-nav li {
+}
+nav li{
     display: inline;
     margin-right: 20px;
 }
-
-
-.section {
-    border: 0 solid #ccc;
-    box-sizing: border-box;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
-    background: rgba(133, 132, 132, 0.875);
-}
-
-.nome {
+a{
+    text-decoration: none;
     color: white;
-    font-size: 48px
 }
+nav li:hover{
+    text-decoration: underline ;
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+}
+/*Utilitários*/
+.mt-7{
+    margin-top:7px;
+
+}
+.mt-14{
+    margin-top:14px;
+}
+.mt-28{
+    margin-top:28px;
 }
