@@ -1,27 +1,157 @@
-:root{
-    --text: #150f12;
-    --bg: #f4f0f2;
-    --primary: #721d47;
-    --secondary: #de6e71;
-    --accent: #2a94a7;
+:root {
+    --bg: rgb(21, 15, 18);
+    --text: rgb(244, 240, 242);
+    --primary: rgb(114, 29, 71);
+    --secondary: rgb(222, 110, 113);
+    --accent: rgb(42, 148, 167);
+    --shadow: rgba(0,0,0,0.35);
 }
-body{
+
+body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
     margin: 0;
     padding: 0;
+    /* overflow: hidden; */
 }
-header{
+
+header {
+    margin-bottom: 7px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.header{
-    position: fixed;
-    width: 100vw;
-    background: linear-gradient(180deg rgba(255,2,2,1) 0%, rgba(0,0,0,0) 100%);
+
+header.header {
     display: flex;
-    transition: height 0.5s;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+nav {
+    cursor: pointer;
+}
+
+button {
+    color: var(--text);
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 2px 8px var(--shadow);
+    background: var(--secondary);
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 2px 8px rgba(222, 110, 113,0.55);
+}
+
+button:active {
+    background:  #5f3131;
+    box-shadow: 0 2px 8px #5f313175;
+
+}
+
+textarea {
+    margin: 10px;
+}
+
+img {
+    height: 150px;
+    border-radius: 45%;
+    box-shadow: 0 4px 10px var(--shadow);
+    margin-left: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text)
+}
+
+a:hover{
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    color: var(--accent);
+    font-size: 30px;
+}
+
+aside{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer{
+    bottom: 0;
+    display:flex;
+    justify-content: space-around;
+
+}
+
+.textoBiografia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil{
+    justify-content: center;
+}
+
+.sobre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sobre p{
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.biografia{
+    display: flex;
+    justify-content: center;
+}
+
+.caixa {
+    height: auto;
+    width: auto;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 15px;
+    background: var(--primary);
+    color: var(--text);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.caixa2 {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin: 5px;    
+    border-radius: 15px;
+    background: var(--accent);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.Menu {
+    width: 6rem;
+    border-radius: 25px;
+    background: var(--primary);
+}
+
+.Menu:hover {
+    background: var(--accent);
+    box-shadow: 0 2px 6px var(--accent);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+
