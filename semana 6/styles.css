@@ -1,0 +1,27 @@
+:root{
+    --text: #150f12;
+    --bg: #f4f0f2;
+    --primary: #721d47;
+    --secondary: #de6e71;
+    --accent: #2a94a7;
+}
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    position: fixed;
+    width: 100vw;
+    background: linear-gradient(180deg rgba(255,2,2,1) 0%, rgba(0,0,0,0) 100%);
+    display: flex;
+    transition: height 0.5s;
+}
