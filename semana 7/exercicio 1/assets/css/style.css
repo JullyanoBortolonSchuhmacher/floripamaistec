@@ -29,11 +29,6 @@ header{
     justify-content: space-around;
 }
 
-.header h1:hover{
-    transform: matrix3d(1.2);
-
-}
-
 a {
     text-decoration: none;
     font-size: 2rem;

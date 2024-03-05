@@ -1,0 +1,132 @@
+:root {
+    --bg: rgb(10, 10, 10);
+    --text: rgb(231, 231, 231);
+    --primary: rgb(52, 11, 27);
+    --secondary: rgb(47, 24, 25);
+    --accent: rgb(19, 66, 74);
+    --shadow: rgba(0,0,0,0.55);
+    --text2: rgb(0, 0, 0);
+}
+/* -------- */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 1.14rem;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 
+    "header header "
+    "sidebar content"
+    "sidebar content";
+    overflow-x: hidden;
+} 
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: var(--secondary);
+    height: 90vh;
+    width: 20vw;
+}
+
+.sidebar h1 {
+    align-items: center;
+    padding: 3rcap;
+    text-shadow: 0 8px 5px #00000085;
+}
+
+.header {
+    grid-area: header;
+    background-color: blue;
+    height: 10vh;
+    width: 100vw;
+    text-align: center;
+    background-color: var(--primary);
+    justify-content: space-around;
+    cursor: default;
+}
+
+.header:hover{
+    text-shadow: 0 2px 16px var(--text);
+    transition: 0.3s ease-in-out;
+}
+
+.content{
+    grid-area: content;
+    background-color: var(--bg);
+    height: 90vh;
+    width: 90vw;
+    font-size: 2rcap;
+}
+
+nav {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--text); 
+    display: grid;
+    justify-content: space-around;
+}
+
+a:hover {
+    color: var(--accent);
+    text-shadow: 0 2px 6px rgba(22, 69, 77, 0.541);
+    transform: scale(1.15);
+    transition: 0.5s ease;   
+}
+
+a:active{
+    transform: scale(0.75);
+    transition: 0.3s;
+    color: var(--text2);
+}
+
+/*
+
+
+.sidebar {
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    align-items: flex-start;
+    height: 100vh;
+    position: absolute;
+    left: -15vw; 
+    transition: 0.3s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.8);
+}
+
+.sidebar:hover{
+    left: 0;
+}
+
+.sidebar h1, .sidebar-icon{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    text-shadow: 0 4px 8px var(--primary);
+    padding: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 8px;    
+    }
+}
+
+.content {
+    width: calc(100% - 200px);
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.136), inset 0 4px 8px rgba(0, 0, 0, 0.136);
+    transition: all ease-in-out 0.3s;
+    margin-left: auto;
+}
+ */
