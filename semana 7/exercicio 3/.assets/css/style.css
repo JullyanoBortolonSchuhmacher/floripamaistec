@@ -137,6 +137,12 @@ button {
 
 .google {
     background-color: var(--branco);
+    cursor: pointer;
+}
+
+.google:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
 }
 
 .google img {
@@ -146,9 +152,15 @@ button {
 
 .facebook {
     background-color: var(--branco);
+    cursor: pointer;
 }
 
 .facebook img {
     height: 20px;
     width: 20px;
+}
+
+.facebook:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
 }
