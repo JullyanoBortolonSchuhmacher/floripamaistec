@@ -1,0 +1,154 @@
+:root {
+    --azul: rgb(183, 207, 248);
+    --branco: rgb(236, 239, 244);
+    --roxo: rgb(178, 163, 236);
+    --rosa: rgb(199, 167, 244);
+    --botao: rgb(68, 96, 241);
+    --text: rgb(79, 79, 79);
+}
+
+body {
+    background: var(--azul);
+    background: linear-gradient(90deg, rgba(210,224,255,1) 0%, rgba(183,207,248,1) 36%, rgba(178,163,236,1) 72%, rgba(199,167,244,1) 100%);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(9,9,119,1);
+}
+
+a:active {
+    color: rgb(9, 90, 119)
+}
+
+.bg-container {
+    margin-top: 5dvh;
+    height: 80vh;
+    width: 90vw;
+    background-color: rgba(255, 255, 255, .65);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.text {
+    padding: 20px;
+}
+
+.text h1 {
+    font-size: 50px;
+
+}
+
+.text p {
+    line-height: 1.7em;
+}
+
+.text img {
+    height: 80%;
+    width: 80%;
+
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;;
+}
+
+.formulario input {
+    padding: 20px;
+    width: 15rem;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    background-color: rgba(151, 170, 203, 0.25);
+}
+
+.inputs {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    margin-bottom: 20px;
+
+}
+
+.fa-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+}
+
+.fa-eye.active {
+    color: blue;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    font-weight:  bold;
+    margin-top: 40px;
+    background-color: var(--botao);
+    color: rgb(232, 232, 252);
+    border: none;
+    border-radius: 16px;
+    width: 15rem;
+}
+
+.invisible {
+    color: #777;
+    font-size: 14px;
+}
+
+.login-rapido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px
+}
+
+.container {
+    padding: 20px;
+    background-color: #A2A2A2;
+    border-color: rgb(100, 100, 100);
+    border-radius: 16px;
+    font-size: 14px;
+}
+
+.mg-14 {
+    margin-top: 14px;
+}
+
+.google {
+    background-color: var(--branco);
+}
+
+.google img {
+    height: 20px;
+    width: 20px;
+}
+
+.facebook {
+    background-color: var(--branco);
+}
+
+.facebook img {
+    height: 20px;
+    width: 20px;
+}
