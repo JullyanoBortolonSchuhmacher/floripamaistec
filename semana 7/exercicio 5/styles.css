@@ -69,6 +69,5 @@ button {
     margin-right: 1rem;
     height: 39rem;
     width: 39rem;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
 }
