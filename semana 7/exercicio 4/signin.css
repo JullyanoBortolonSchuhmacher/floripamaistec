@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(45deg, rgb(252, 237, 188) 0%, rgb(252, 236, 185) 100%);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(67, 67, 67)
+}
+
+.bg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+    border: none;
+    border-radius: 16px;
+    margin-top: 3%;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.logo {
+    display: flex;
+    margin-left: -70%;
+}
+
+.text p {
+    font-size: 12px;
+}
+
+.text h4 {
+    text-emphasis: none;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(67, 67, 67);
+    font-size: 16px;
+    text-emphasis: strong;
+    font-weight: 700;
+}
+
+.text input {
+    padding: 15px;
+    width: 15em;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 8px;
+    outline: none;
+}
+
+.text p {
+    font-size: 16px;
+    text-emphasis: strong;
+    font-weight: 700;
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+}
+
+.phone input { 
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.phone select {
+    padding: 5px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.text input:active {
+    border: gray;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    background: rgb(36, 36, 36);
+    color: #DADADA;
+    padding: 10px;
+    width: 150px;
+}
+
