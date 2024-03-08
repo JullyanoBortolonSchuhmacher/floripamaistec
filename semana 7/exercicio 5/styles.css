@@ -1,0 +1,74 @@
+:root {
+    --text: #FFFFFF;
+    --acbutton: #FFBF00;
+    --textbutton: #332200;
+    --bg: #000;
+    --subtitle: #B2B2B2;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
+    overflow-y: hidden;
+}
+ 
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.2rem;
+    margin-right: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 5rem;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.dot {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    background: var(--acbutton);
+}
+
+button {
+    color: var(--textbutton);
+    background-color: var(--acbutton);
+    text-transform: uppercase;
+    height: 3rem;
+    width: 12rem;
+    font-weight: 900;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.image img {
+    margin-right: 1rem;
+    height: 39rem;
+    width: 39rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
