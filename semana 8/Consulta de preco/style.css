@@ -1,7 +1,8 @@
 body{
-    background: linear-gradient(45deg, rgb(156, 0, 148) 0%, rgb(123, 14, 172) 50%, rgb(82, 15, 240));
+    background: linear-gradient(45deg, rgb(13, 86, 45) 0%, rgb(102, 148, 27) 50%, rgb(63, 173, 227));
     color: #fff;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -17,18 +18,21 @@ body{
 .usrBox input {
     margin-bottom: 1rem;
     height: 3rem;
-    width: 15rem;
+    width: 17rem;
     border: none;
     border-radius: 8px;
+    font-size: medium;
+    box-shadow: 0 4px 8px #000000b5;
 }
 
 .usrBox button {
     margin-top: 1rem;
-    height: 2rem;
-    width: 12rem;
+    height: 3rem;
+    width: 13rem;
     border: none;
     border-radius: 16px;
     font-size: 18px;
+    box-shadow: 0 4px 8px #000000b5;
 }
 
 .usrBox button:hover {

@@ -10,8 +10,14 @@
     <div class="usrBox">
         <h2>Consulta de preços</h2>
         <input  type="text" id="codigo" placeholder="Insira o nome ou código do produto">
-        <button class="consulButton">Consultar</button>
-        <button class="CompButton">Comprar</button>
+        <button class="consulButton" id="consulta" onclick="consulta()">Consultar</button>
+        <button class="CompButton" id="compra">Comprar</button>
+    </div>
+    <br><br>
+    <div class="resp">
+        <h3 id="consultaResp"></h3>
+        <h3 id="compraResp"></h3>
+        <script src="script.js"></script>
     </div>
 </body>
 </html>
