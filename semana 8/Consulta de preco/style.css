@@ -1,0 +1,37 @@
+body{
+    background: linear-gradient(45deg, rgb(156, 0, 148) 0%, rgb(123, 14, 172) 50%, rgb(82, 15, 240));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 25px;
+}
+
+.usrBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.usrBox input {
+    margin-bottom: 1rem;
+    height: 3rem;
+    width: 15rem;
+    border: none;
+    border-radius: 8px;
+}
+
+.usrBox button {
+    margin-top: 1rem;
+    height: 2rem;
+    width: 12rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 18px;
+}
+
+.usrBox button:hover {
+    background-color: #2b2ee875;
+    color: white;
+}
