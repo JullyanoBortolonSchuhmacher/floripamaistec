@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <title>Consulta de Preços</title>
 </head>
 <body>
     <div class="usrBox">
         <h2>Consulta de preços</h2>
-        <input  type="text" id="codigo" placeholder="Insira o nome ou código do produto">
-        <button class="consulButton" id="consulta" onclick="consulta()">Consultar</button>
-        <button class="CompButton" id="compra">Comprar</button>
+        <div>
+            <input type="text" id="nomeCodigoProduto" placeholder="Insira o nome ou código do produto"><br/> 
+            <button class="consulButton" id="consulta" onclick="consulta()">Consultar</button> 
+            <button class="CompButton" id="comprar" onclick="comprar()">Comprar</button>
+        </div>
     </div>
     <br><br>
     <div class="resp">
         <h3 id="consultaResp"></h3>
         <h3 id="compraResp"></h3>
+            <ul id="carrinho">
+            </ul>
         <script src="script.js"></script>
     </div>
 </body>

@@ -2,7 +2,7 @@ body{
     background: linear-gradient(45deg, rgb(13, 86, 45) 0%, rgb(102, 148, 27) 50%, rgb(63, 173, 227));
     color: #fff;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -13,6 +13,13 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background */
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(5rem);
+    border: none;
 }
 
 .usrBox input {
@@ -22,7 +29,6 @@ body{
     border: none;
     border-radius: 8px;
     font-size: medium;
-    box-shadow: 0 4px 8px #000000b5;
 }
 
 .usrBox button {
@@ -32,10 +38,26 @@ body{
     border: none;
     border-radius: 16px;
     font-size: 18px;
-    box-shadow: 0 4px 8px #000000b5;
 }
 
 .usrBox button:hover {
-    background-color: #2b2ee875;
+    transition: 0.3s;
+    background-color: #121212df;
     color: white;
+    cursor: pointer;
 }
+
+.usrBox button:active {
+    transition: 0.3s;
+    transform: scale(0.95);
+    background-color: #151515;
+}
+
+.resp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    text-transform: lowercase;
+}
+
