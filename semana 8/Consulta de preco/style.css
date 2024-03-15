@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(45deg, rgb(13, 86, 45) 0%, rgb(102, 148, 27) 50%, rgb(63, 173, 227));
+    background: linear-gradient(45deg, rgb(22, 30, 62) 0%, rgb(19, 45, 16) 50%, rgb(63, 173, 227));
     color: #fff;
     display: flex;
     flex-direction: row;
@@ -25,7 +25,7 @@ body{
 .usrBox input {
     margin-bottom: 1rem;
     height: 3rem;
-    width: 17rem;
+    width: calc(100% - 0.5rem);
     border: none;
     border-radius: 8px;
     font-size: medium;
@@ -38,6 +38,12 @@ body{
     border: none;
     border-radius: 16px;
     font-size: 18px;
+}
+
+.bCarrinho button {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
 }
 
 .usrBox button:hover {
@@ -57,7 +63,15 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 2rem;
     text-transform: lowercase;
 }
 
+.error button{
+    border: solid 3px;
+    border-color: rgb(255, 100, 100);
+    box-shadow: 0 0 4px rgba(255,  100, 100, 0.7);
+    background-color: rgba(255, 100, 100, .1);
+    color: red;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}

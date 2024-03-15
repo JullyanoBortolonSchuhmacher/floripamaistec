@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css"/>
     <title>Consulta de Preços</title>
 </head>
 <body>
     <div class="usrBox">
+        
         <h2>Consulta de preços</h2>
         <div>
-            <input type="text" id="nomeCodigoProduto" placeholder="Insira o nome ou código do produto"><br/> 
+            <input type="text" id="nomeCodigoProduto" placeholder="Insira o nome ou código do produto" minlength="3"><br/> 
             <button class="consulButton" id="consulta" onclick="consulta()">Consultar</button> 
             <button class="CompButton" id="comprar" onclick="comprar()">Comprar</button>
         </div>
-    </div>
-    <br><br>
-    <div class="resp">
-        <h3 id="consultaResp"></h3>
-        <h3 id="compraResp"></h3>
-            <ul id="carrinho">
-            </ul>
-        <script src="script.js"></script>
+        <div id="valorTotal">
+            <button class="totalButton" onclick="vlrTotal()">Ver valor total</button>
+            <p id="vlrTotal"></p>
+            <h3 id="consultaResp"></h3>
+            <h2 id="h2carrinho"></h2>
+            <h3 id="compraResp"></h3>
+            <ul id="carrinho"></ul>
+            <script src="script.js"></script>
+        </div>
     </div>
 </body>
 </html>
