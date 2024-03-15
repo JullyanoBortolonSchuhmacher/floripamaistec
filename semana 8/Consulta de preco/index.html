@@ -8,22 +8,32 @@
     <title>Consulta de Preços</title>
 </head>
 <body>
-    <div class="usrBox">  
-        <h2>Consulta de preços</h2>
-        <div>
-            <input type="text" id="nomeCodigoProduto" placeholder="Insira o nome ou código do produto" minlength="3"><br/> 
-            <button class="consulButton" id="consulta" onclick="consulta()">Consultar</button> 
-            <button class="CompButton" id="comprar" onclick="comprar()">Comprar</button>
-        </div>
+    <div > 
+        <div class="usrBox">  
+            <h2>Consulta de preços</h2>
+            <div>
+                <input type="text" id="nomeCodigoProduto" placeholder="Insira o nome do produto"><br/> 
+                <input type="number" id="precoProduto" placeholder="Insira o valor produto"><br/> 
+                <button class="consulButton" id="consulta" onclick="consulta();limparInput()">Consultar</button> 
+                <button class="CompButton" id="comprar" onclick="comprar();limparInput()">Comprar</button>
+                <button class="totalButton" onclick="vlrTotal()">Ver valor total</button>
+            </div>
         <div id="valorTotal">
-            <button class="totalButton" onclick="vlrTotal()">Ver valor total</button>
-            <p id="vlrTotal"></p>
-            <h3 id="consultaResp"></h3>
+            <h3 id="showInHtml"></h3>
             <h2 id="h2carrinho"></h2>
             <h3 id="compraResp"></h3>
             <ul id="carrinho"></ul>
             <script src="script.js"></script>
         </div>
+        </div>
     </div>
 </body>
 </html>
+<!-- 
+Retornar ‘Carrinho vazio’ caso o valor seja 0.
+
+Para um melhor cálculo, utilizar um modelo de array de objetos para a lista de compras / carrinho do usuario.
+
+carrinho = [{nome: ‘Feijão’, preco: 5.99 }, {nome: ‘Arroz’, preco: 23.99}]
+
+Após isso, basta percorrer em cada item e somar o preço. Ex: soma += preco -->
