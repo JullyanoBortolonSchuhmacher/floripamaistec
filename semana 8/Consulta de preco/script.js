@@ -95,7 +95,6 @@ function adicionarItemAoCarrinho(produto, preco) {
     atualizarQtdCarrinho();
     const id = carrinho.length;
     let itemCarrinho = {
-        id: id,
         nome: produto,
         preco: preco
     };
