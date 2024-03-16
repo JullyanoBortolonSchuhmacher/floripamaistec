@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css"/>
-    <title>Consulta de Preços</title>
+    <title>Consulta de preços</title>
 </head>
-<body>
-    <div > 
-        <div class="usrBox">  
-            <h2>Consulta de preços</h2>
-            <div>
-                <input type="text" id="nomeCodigoProduto" placeholder="Insira o nome do produto"><br/> 
-                <input type="number" id="precoProduto" placeholder="Insira o valor produto"><br/> 
-                <button class="consulButton" id="consulta" onclick="consulta();limparInput()">Consultar</button> 
-                <button class="CompButton" id="comprar" onclick="comprar();limparInput()">Comprar</button>
-                <button class="totalButton" onclick="vlrTotal()">Ver valor total</button>
-            </div>
-        <div id="valorTotal">
-            <h3 id="showInHtml"></h3>
-            <h2 id="h2carrinho"></h2>
-            <h3 id="compraResp"></h3>
-            <ul id="carrinho"></ul>
-            <script src="script.js"></script>
+<body class="row" desabilitarBotao()>
+    <div class="usrBox">
+        <div class="row">
+            <h1>Consulta de Preços</h1>
+            <span class="close usrbox" id="close" onclick="f5()">X</span>
         </div>
+        <input type="text" id="idProduto" placeholder="Insira o nome ou código do produto">
+        <button id="consultar" onclick="consultarPreco()">Consultar</button>
+        <h3 id="respPreco"></h3> 
+        <div class="row">
+            <br>
+            <button id="addCarrinho" onclick="adicionarAoCarrinho()">Comprar</button>
         </div>
     </div>
+    <div class="column usrBox2">
+        <h2 class="material-symbols-outlined">shopping_cart</h2><h3>Carrinho</h3><br>
+        <p id="qtdCarrinho">Carrinho Vazio</p>
+    </div>
+    <ul id="itensCarrinho"></ul>
+    <div class="column vltTotal usrBox2">
+        <h2>Valor total</h2>
+        <p id="vlrTotal">Total: R$0.00</p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
-<!-- 
-Retornar ‘Carrinho vazio’ caso o valor seja 0.
-
-Para um melhor cálculo, utilizar um modelo de array de objetos para a lista de compras / carrinho do usuario.
-
-carrinho = [{nome: ‘Feijão’, preco: 5.99 }, {nome: ‘Arroz’, preco: 23.99}]
-
-Após isso, basta percorrer em cada item e somar o preço. Ex: soma += preco -->
