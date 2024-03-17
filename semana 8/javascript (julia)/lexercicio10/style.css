@@ -1,0 +1,74 @@
+body {
+    background: linear-gradient(10deg, rgb(73, 34, 71) 0%, rgb(28, 50, 64) 100%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 0 30px 4px rgba(5, 5, 25, 0.35);
+    backdrop-filter: blur(5rem);
+    border: none;
+    
+}
+.content input {
+    padding: 1.5rem;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 0 30px 4px rgba(5, 5, 25, 0.35);
+}
+
+.content button {
+    padding: 1rem;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 0 30px 4px rgba(5, 5, 25, 0.35);
+}
+
+.itensListaDeTarefas {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: rgba(249, 249, 249, 0.25);
+    border: none;
+    border-radius: 16px;
+}
+.flexend{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-concluir {
+    background-color: #28a745;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.btn-concluir button:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: aquamarine;
+}
+
+.btn-remover {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-remover button:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: crimson;
+}

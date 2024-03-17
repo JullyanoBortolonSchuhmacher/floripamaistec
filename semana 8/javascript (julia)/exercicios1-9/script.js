@@ -7,7 +7,7 @@ const cor = document.getElementById("cor");     //input color
 const tamanho = document.getElementById("tamanho"); //input range tamanho da div
 const quantidade = document.getElementById("rangeNumeros");    //input range numeros
 const textoh3 = document.getElementById("avsDiv");          //texto  do h3 (sobre a div lorem)
-const numerosDiv = document.getElementById("numeros");      //numeros da (div numeros)
+const botaoNovo = document.getElementById("botaoNovo"); //botao que desabilita quando menor que 50
 
 
 //clicando no botao que muda as cores 
@@ -35,22 +35,35 @@ function alterarTamanho() {
   }
 }
 
+//chamando funções
+elementoClique.onclick = cliqueBotao;
+tamanho.oninput = alterarTamanho;
+quantidade.oninput = adicionarNumeros;
+
+
 //colocando numeros de acordo com o tamanho da range
 function adicionarNumeros() {
     let quadro = [];
     const valorRange = parseInt(quantidade.value);
     
     for (let i = 1; i <= valorRange; i++) {
-      quadro.push(i);
+        quadro.push(i);
     }
     numerosDiv.innerText = quadro.join(', ');
 }
 
-//chamando funções
-elementoClique.onclick = cliqueBotao;
-tamanho.oninput = alterarTamanho;
-quantidade.oninput = adicionarNumeros;
-
+//desabilita e habilita através de atributos
+quantidade.addEventListener('input', function() {
+    if (parseInt(quantidade.value) < 50) {
+        botaoNovo.setAttribute('disabled', 'true'); // Desabilita o botão se a quantidade for menor que 50
+    } else {
+        botaoNovo.removeAttribute('disabled');   }
+});
+    
+//chamando a função de alterar tamanho do texto lorem
+alterarTamanho();
+ 
+    
 //criando um novo elemento  e  appendchild
 const button = document.createElement("button");
 const textNode = document.createTextNode("Clique aqui!");
@@ -60,12 +73,8 @@ paragrafo.appendChild(button);
 document.body.appendChild(paragrafo);
 
 button.onclick = function() {
-  const novoParagrafo = document.createElement("p");
-  const textNode = document.createTextNode("Texto inserido!");
-  novoParagrafo.appendChild(textNode);
-  novoParagrafo.id = "novo paragrafo";
-  document.body.appendChild(novoParagrafo);
+    const novoParagrafo = document.createElement("p");
+    const textNode = document.createTextNode("oi");
+    novoParagrafo.appendChild(textNode);
+    document.body.appendChild(novoParagrafo);
 }
-
-//chamando a função de alterar tamanho do texto lorem
-alterarTamanho();
