@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            background-color: rgb(22, 22, 22);
+            color: white;
+        }
+
+        h3 {
+            font-size: 3rem;
+        }
+
+        button {
+            border: none;
+            border-radius: 16px;
+            padding: 12px 32px;
+            background: #ffffff54;
+            font-size: 14px;
+            cursor: pointer;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.45);
+        }
+
+        .container {
+            margin: 5rem;
+            gap: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+
+
+    <div class="container">
+
+        <h3 id="tempo"></h3>
+
+        <button onclick="timer()">Começar</button>
+        <button onclick="timer5s()">Começar time 5 seg</button>
+        <button onclick="pararTimeOut()">Parar setInterval</button>
+    </div>
+</body>
+<script>
+    
+    const textoNohtml = document.getElementById('tempo');
+    let contador = 0;
+    let pararFuncao;
+
+    function acabouTimeOut(){
+        textoNohtml.innerText = contador;
+        window.alert('O tempo acabou');
+    }
+
+    function timer(){
+        textoNohtml.innerText = contador;
+        console.log(contador);
+        contador++;
+    }
+
+    function timer5s(){
+        pararFuncao = setInterval(() => {
+            textoNohtml.innerText = contador;
+            console.log(contador);
+            contador++;
+        }, 1000); 
+    }
+
+    function pararTimeOut(){
+        clearInterval(pararFuncao);
+        contador = 0;
+        console.log("Timeout Parado");
+    }
+
+</script>
+</html>
