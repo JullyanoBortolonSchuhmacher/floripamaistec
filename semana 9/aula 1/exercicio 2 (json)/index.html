@@ -7,11 +7,21 @@
 </head>
 <body>
     
-    <!---->
+    <button onclick="converterToJson()">Converter para JSON</button>
+    <button onclick="converterToJs()">Converter para Js</button>
 
 
     <script>
-        //
+        const exemploObj = {
+            produto: "morango",
+            valor: "R$ 7,50",
+        }
+
+        function converterToJson() {
+            const jsonObj = JSON.stringify(exemploObj);
+            console.log("convertido: \n", jsonObj, "\n");
+        }
+
     </script>
 
 </body>

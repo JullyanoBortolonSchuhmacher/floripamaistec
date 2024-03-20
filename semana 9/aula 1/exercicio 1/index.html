@@ -50,18 +50,17 @@
 <script>
     
     const textoNohtml = document.getElementById('tempo');
-    let contador = 0;
+    let contador = 1;
     let pararFuncao;
 
     function acabouTimeOut(){
-        textoNohtml.innerText = contador;
         window.alert('O tempo acabou');
     }
 
     function timer(){
-        textoNohtml.innerText = contador;
         console.log(contador);
         contador++;
+        
     }
 
     function timer5s(){
