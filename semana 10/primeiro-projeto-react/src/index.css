@@ -6,15 +6,3 @@
   box-sizing: border-box;
   cursor: default;
 }
-
-cursor {
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  z-index: 999;
-  pointer-events: none;
-  mix-blend-mode: difference;
-
-}

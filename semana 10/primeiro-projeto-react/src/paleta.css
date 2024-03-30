@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:wght@100..900&display=swap');
+
 :root {
     --bg: #101010;
     --text: #fff;
     --primary: #244c71;
-    --secondary: #235c46;
-    --accent: #6c8131;
+    --secondary: #337280;
+    --accent: #0085A3;
+    --error: #ff6767;
+    --acert: #8bff8b;
 }
-@export :root;

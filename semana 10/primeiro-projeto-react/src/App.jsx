@@ -1,4 +1,4 @@
-import CardTrilha from "./components/CardTrilha"
+import CardTrilha from "./components/cardTrilha";
 import "./App.css"
 
 function App() {
@@ -19,35 +19,26 @@ function App() {
   ]
 
   return (
+    <>
+    <header>
+      <nav>
+        <h1>Adventure Trails FD</h1>
+          <a href="#explorar">Explorar Trilhas</a>
+          <a href="#cadastro">Cadastrar Trilhas</a>
+      </nav>
+    </header>
     <div className="container">
-      <h1 className="titulo">Explore trilhas incríveis</h1>
+      <div className="header" display: flex flex-direction:row>
+        <h1 className="titulo">Explore trilhas incríveis</h1>
+        <button className="favoritar"></button>
+        </div>
       {
         listaTrilhas.map((trilha, index) => (
           <CardTrilha dadosTrilha={trilha} key={index} />
         ))
       }
     </div>
+    </>
   )
 }
-
-function AnimatedCursor({
-  color = '220, 90, 90',
-  outerAlpha = 0.4,
-  innerSize = 8,
-  outerSize = 8,
-  outerScale = 5,
-  innerScale = 0.7
-}) {
-  const cursorOuterRef = React.useRef();
-  const cursorInnerRef = React.useRef();
-  const requestRef = React.useRef();
-  const previousTimeRef = React.useRef();
-  const [coords, setCoords] = React.useState({ x: 0, y: 0 });
-  const [isVisible, setIsVisible] = React.useState(true);
-  const [isActive, setIsActive] = React.useState(false);
-  const [isActiveClickable, setIsActiveClickable] = React.useState(false);
-  let endX = React.useRef(0);
-  let endY = React.useRef(0);
-}
-
 export default App
