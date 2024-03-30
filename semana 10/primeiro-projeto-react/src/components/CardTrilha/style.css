@@ -5,35 +5,38 @@
   font-family: "inter", sans-serif;
 }
 
-header{
-  display: flex;
-  flex-direction: row;
-  font-family: "Comfortaa", sans-serif;
-}
-
 a {
   text-decoration: none;
   color: var(--text);
+  cursor: pointer;
 }
 
 .card_container {
-    display: flex;
-    height: 15em;
+  display: flex;
+  height: 15em;
+  background: aliceblue;
+}
+  
+.card_container h3{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+  
+.card_imagem {
+  background-position: center;
+  width: 250px;
+  object-fit: cover;
 }
 
-.card_container span{
-  display: flex;
-  flex-direction: column;
-}
-.favoritar {
+#favoritar {
   border: none;
   background: none;
   color: none;
 }
-.favoritar:hover {
-  color: #f57171;
-}
 
-.card_imagem {
-  background-position: center;
+#favoritar:hover {
+  color: #f57171;
+  transition: all .3s ease-out;
+  text-shadow: .2em .2em 1em #f57171;
 }

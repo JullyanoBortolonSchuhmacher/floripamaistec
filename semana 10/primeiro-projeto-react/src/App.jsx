@@ -20,24 +20,22 @@ function App() {
 
   return (
     <>
-    <header>
-      <nav>
-        <h1>Adventure Trails FD</h1>
-          <a href="#explorar">Explorar Trilhas</a>
-          <a href="#cadastro">Cadastrar Trilhas</a>
-      </nav>
-    </header>
-    <div className="container">
-      <div className="header" display: flex flex-direction:row>
-        <h1 className="titulo">Explore trilhas incríveis</h1>
-        <button className="favoritar"></button>
-        </div>
+      <header>
+          <h1>Adventure Trails FD</h1>
+        <nav>
+            <a href="#explorar">Explorar Trilhas</a>
+            <a href="#cadastro">Cadastrar Trilhas</a>
+        </nav>
+      </header>
+      <div className="container">
+        <h1 className="titulo">Explore trilhas incríveis</h1>  
+      
       {
         listaTrilhas.map((trilha, index) => (
           <CardTrilha dadosTrilha={trilha} key={index} />
         ))
       }
-    </div>
+      </div>
     </>
   )
 }

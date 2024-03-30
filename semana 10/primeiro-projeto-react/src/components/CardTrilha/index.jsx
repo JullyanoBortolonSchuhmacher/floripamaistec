@@ -3,14 +3,18 @@ import "./style.css"
 
 function CardTrilha({dadosTrilha}){
   return (
+    <>
     <div className="card_container">
       <img className="card_imagem" width={200} src={dadosTrilha.urlImagem} alt="imagem trilha" />
       <div className="card_header">
-        <h1>{dadosTrilha.nomeTrilha}</h1>
-        <span>{dadosTrilha.cidade} / {dadosTrilha.estado}</span>
-        <button className="favoritar"><span class="material-symbols-outlined">favorite</span></button>
+        <h3>{dadosTrilha.nomeTrilha} 
+        <p>-</p>
+        <h4> {dadosTrilha.cidade} / {dadosTrilha.estado}</h4>
+        <button id="favoritar"><span class="material-symbols-outlined">favorite</span></button>
+        </h3>
       </div>
     </div>
+    </>
   )
 }
 
