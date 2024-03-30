@@ -1,6 +1,9 @@
+```
 # Adventure Trails FD
+```
+```
 - Turma Fitness
-
+```
 Projeto evolutivo elaborado durante as aulas, acompanhando o aprendizado.
 
 Atualmente, utilizando vite e react:
