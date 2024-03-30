@@ -1,0 +1,13 @@
+@import "./paleta.css";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .titulo {
+    margin: 1em auto;
+  }

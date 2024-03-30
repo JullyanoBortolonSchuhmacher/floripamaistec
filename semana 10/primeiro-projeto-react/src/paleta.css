@@ -1,0 +1,8 @@
+:root {
+    --bg: #101010;
+    --text: #fff;
+    --primary: #244c71;
+    --secondary: #235c46;
+    --accent: #6c8131;
+}
+@export :root;
