@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <header>
-          <h1>Adventure Trails FD</h1>
+          <h1><a href="#" className="h1header">Adventure Trails FD</a></h1>
         <nav>
             <a href="#explorar">Explorar Trilhas</a>
             <a href="#cadastro">Cadastrar Trilhas</a>

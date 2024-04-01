@@ -2,7 +2,12 @@
 
 *{
   background: var(--bg);
-  font-family: "inter", sans-serif;
+  /* color: var(--text); */
+}
+
+header {
+  background: linear-gradient(180deg, var(--primary), transparent);
+
 }
 
 a {
@@ -11,10 +16,15 @@ a {
   cursor: pointer;
 }
 
+.h1header {
+  color: var(--accent);
+}
 .card_container {
   display: flex;
   height: 15em;
-  background: aliceblue;
+  color: white;
+  margin: .7rem;
+  overflow: hidden;
 }
   
 .card_container h3{
@@ -36,7 +46,7 @@ a {
 }
 
 #favoritar:hover {
-  color: #f57171;
+  color: #ff4040;
   transition: all .3s ease-out;
-  text-shadow: .2em .2em 1em #f57171;
+  text-shadow: .2em .2em 1em #ff4040;
 }

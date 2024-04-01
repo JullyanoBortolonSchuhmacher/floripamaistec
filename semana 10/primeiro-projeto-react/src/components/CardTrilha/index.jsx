@@ -4,7 +4,7 @@ import "./style.css"
 function CardTrilha({dadosTrilha}){
   return (
     <>
-    <div className="card_container">
+    <div className="card_container" >
       <img className="card_imagem" width={200} src={dadosTrilha.urlImagem} alt="imagem trilha" />
       <div className="card_header">
         <h3>{dadosTrilha.nomeTrilha} 
