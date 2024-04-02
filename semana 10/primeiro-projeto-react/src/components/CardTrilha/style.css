@@ -46,6 +46,7 @@ a:hover:before {
   display: flex;
   flex-direction: row;
   gap: 1em;
+  justify-content: flex-end;
 }
   
 .card_imagem {
