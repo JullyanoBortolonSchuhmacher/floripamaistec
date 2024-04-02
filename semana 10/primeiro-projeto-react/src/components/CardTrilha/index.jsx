@@ -6,12 +6,21 @@ function CardTrilha({dadosTrilha}){
     <>
     <div className="card_container" >
       <img className="card_imagem" width={200} src={dadosTrilha.urlImagem} alt="imagem trilha" />
+      <div className="card_content">
       <div className="card_header">
         <h3>{dadosTrilha.nomeTrilha} 
         <p>-</p>
         <h4> {dadosTrilha.cidade} / {dadosTrilha.estado}</h4>
         <button id="favoritar"><span class="material-symbols-outlined">favorite</span></button>
         </h3>
+      </div>
+      <br></br>
+      <div className="card_about">
+        <h3> {dadosTrilha.nomeUsuario} </h3>
+        <p> Duração: {dadosTrilha.duracao} min </p>
+        <p> Trajeto: {dadosTrilha.trajeto} km </p>
+        <span> {dadosTrilha.dificuldade} </span>
+      </div>
       </div>
     </div>
     </>
