@@ -1,4 +1,4 @@
-import CardTrilha from "./components/cardTrilha";
+import CardTrilha from "./components/CardTrilha";
 import "./App.css"
 
 function App() {
