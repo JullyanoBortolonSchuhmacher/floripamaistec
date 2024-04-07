@@ -1,0 +1,12 @@
+{
+    "semi": true,
+    "tabWidth": 1,
+    "printWidth": 80,
+    "singleQuote": false,
+    "trailingComma": "none",
+    "jsxBracketSameLine": true,
+
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.configPath": ".prettierrc"
+}

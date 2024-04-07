@@ -1,67 +1,57 @@
-@import url("https://github.com/JullyanoBortolonSchuhmacher/floripamaistec/blob/2f7b127da3a7c9933038efbd42a34d80a8b4a2f8/semana%2010/primeiro-projeto-react/src/paleta.css"); 
 
 *{
   background: var(--bg);
   color: var(--text);
 }
 
-a {
-  position: relative;
-  text-decoration: none;  
-}
-
-a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--accent);
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0.2s;
-}
-
-a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
 .h1header {
   color: var(--accent);
+  animation-name: header1;
+  animation-duration: infinite;
 }
+
 .card_container {
   display: flex;
-  height: 15em;
+  height: 13em;
   color: white;
-  margin: .7rem;
+  margin: .5rem;
   overflow: hidden;
 }
-  
 .card_container h3{
   display: flex;
   flex-direction: row;
   gap: 1em;
 }
+.card_container p, span{
+  margin: .5em 1em;
   
+}
+.card_container span{
+  padding: 5px;
+  background-color: var(--accent);
+  border-radius: 16em;
+}
+
 .card_imagem {
   background-position: center;
   width: 250px;
   object-fit: cover;
 }
 
-#favoritar {
+#favoritar{
   border: none;
-  background: none;
-  color: none;
+  cursor: pointer;
+  background: var(--accent);
+  padding: 5px;
+  border-radius: 16em;
 }
-
 #favoritar:hover {
-  color: #ff4040;
-  transition: all .3s ease-out;
-  text-shadow: .2em .2em 1em #ff4040;
+  transform: scale(-1.2, 1.2);
+  transition: transform .3s ease .2s;
+}
+#favoritar:active {
+  color: #000;
+  background: var(--acert);
+  transform: scale(-0.8, 0.8);
+  transition: all .3s ease;
 }

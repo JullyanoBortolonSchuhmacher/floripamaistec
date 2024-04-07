@@ -20,6 +20,7 @@ function App() {
 
   return (
     <>
+      <div className="pageHeader">
       <header>
           <h1 id="hover"><a href="#" className="h1header">Adventure Trails FD</a></h1>
         <nav>
@@ -27,13 +28,16 @@ function App() {
             <a id="hover" href="#cadastro">Cadastrar Trilhas</a>
         </nav>
       </header>
+      </div>
+      <h1 className="titulo">Explore trilhas incríveis</h1>  
       <div className="container">
-        <h1 className="titulo">Explore trilhas incríveis</h1>  
       {
         listaTrilhas.map((trilha, index) => (
           <CardTrilha dadosTrilha={trilha} key={index} />
         ))
       }
+      <div className="container2">
+      </div>
       </div>
     </>
   )

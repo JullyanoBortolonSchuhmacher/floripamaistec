@@ -1,32 +1,47 @@
 import * as PropTypes from "prop-types"
+import dadosTrilha from "./listasTrilha.json"
 import "./style.css"
 
-function CardTrilha({dadosTrilha}){
-  return (
-    <>
-    <div className="card_container" >
-      <img className="card_imagem" width={200} src={dadosTrilha.urlImagem} alt="imagem trilha" />
-      <div className="card_content">
-      <div className="card_header">
-        <h3>{dadosTrilha.nomeTrilha} 
-        <p>-</p>
-        <h4> {dadosTrilha.cidade} / {dadosTrilha.estado}</h4>
-        <button id="favoritar"><span class="material-symbols-outlined">favorite</span></button>
-        </h3>
-      </div>
-      <br></br>
-      <div className="card_about">
-        <h3> {dadosTrilha.nomeUsuario} </h3>
-        <p> Duração: {dadosTrilha.duracao} min </p>
-        <p> Trajeto: {dadosTrilha.trajeto} km </p>
-        <span> {dadosTrilha.dificuldade} </span>
-      </div>
-      </div>
-    </div>
-    </>
-  )
+const useFetchTrilhas = (url) => {
+  const [dadosTrilha, setDadosTrilha] = useState(null);
+  const [loading, setLoading] = useState(null);
+  const [error, setError] = useState(null);
+
+  //fazer Depois:
+  //useEffect aqui
+  //fetch 
+  //meucomponente
+  //se erro ....
+  //renderizar:
 }
 
+function CardTrilha() {
+
+  return (
+    <>
+      <div className="card_container">
+        <img src={dadosTrilha.urlImagem} width={200} alt="imagem trilha Lagoa" className="card_imagem" />
+        <div className="card_content">
+          <div className="card_header">
+            <h3>
+              {dadosTrilha.nomeTrilha}
+              <p>-</p>
+              <h4>{dadosTrilha.cidade} / {dadosTrilha.estado}</h4>
+              <button id="favoritar" className="material-symbols-outlined">favorite</button>
+            </h3>
+          </div>
+          <br />
+          <div className="card_about">
+            <h3>{dadosTrilha.nomeUsuario}</h3>
+            <p>Duração: {dadosTrilha.duracao} min</p>
+            <p>Trajeto: {dadosTrilha.trajeto} km</p>
+            <span>{dadosTrilha.dificuldade}</span>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 // configuração das props types
 CardTrilha.propTypes = {
@@ -44,6 +59,5 @@ CardTrilha.propTypes = {
   })
 }
 
-// aqui vai os prop-types
 
 export default CardTrilha;
