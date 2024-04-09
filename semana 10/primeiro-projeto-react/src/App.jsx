@@ -1,45 +1,52 @@
-import CardTrilha from "./components/cardTrilha";
-import "./App.css"
+import CardTrilha from "./components/CardTrilha";
+import "./App.css";
+import React, { useState, useEffect } from 'react';
+import header from "./components/header";
 
 function App() {
+    const [dadosTrilha, setDadosTrilha] = useState(null);
+    const [header, setHeader] = useState(null);
+    
 
-  const listaTrilhas = [
-    {
-      nomeTrilha: "Trilha da Costa da Lagoa",
-      cidade: "Florianópolis",
-      estado: "SC",
-      duracao: 120,
-      trajeto: 5,
-      dificuldade: "iniciante",
-      tipo: "caminhada / trekking",
-      nomeUsuario: "Jullyano Schuhmacher",
-      urlImagem: "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      // urlImagem: "./assets/imagem-trilha-exemplo.jpg"
-    }
-  ]
+    useEffect(() => {
+      const fetchDadosTrilha = async() => {
+        const response = await fetch('/dataLagoa.json')
+        const json =  await response.json();
+        setDadosTrilha(json);
+      };
+      fetchDadosTrilha();
+    }, []);
+  
+    return (
+      <>
+        <div className="pageHeader">
+          <header>
+            {header}
+            {/* <h1 id="hover">
+              <a href="#" className="h1header">
+                Adventure Trails FD
+              </a>
+            </h1>
+            <nav>
+              <a id="hover" href="#explorar">
+                Explorar Trilhas
+              </a>
+              <a id="hover" href="#cadastro">
+                Cadastrar Trilhas
+              </a>
+            </nav> */}
+          </header>
+        </div>
+        <h1 className="titulo">Explore trilhas incríveis</h1>
+        <div className="container">
+        {dadosTrilha ? (
+         <CardTrilha dadosTrilha={dadosTrilha} />
+          ) : (
+        <div>Carregando dados da trilha...</div>
+        )}
+        </div>
+      </>
+    );
+  }
 
-  return (
-    <>
-      <div className="pageHeader">
-      <header>
-          <h1 id="hover"><a href="#" className="h1header">Adventure Trails FD</a></h1>
-        <nav>
-            <a id="hover" href="#explorar">Explorar Trilhas</a>
-            <a id="hover" href="#cadastro">Cadastrar Trilhas</a>
-        </nav>
-      </header>
-      </div>
-      <h1 className="titulo">Explore trilhas incríveis</h1>  
-      <div className="container">
-      {
-        listaTrilhas.map((trilha, index) => (
-          <CardTrilha dadosTrilha={trilha} key={index} />
-        ))
-      }
-      <div className="container2">
-      </div>
-      </div>
-    </>
-  )
-}
 export default App

@@ -8,7 +8,9 @@ header{
   color: var(--accent);
   margin: 1em;
 }
-
+.h1header {
+  color: var(--accent);
+}
 nav{
   display: flex;
   gap: 2em;
@@ -19,7 +21,7 @@ a {
   text-decoration: none;  
   cursor: pointer;
 }
-a:before {
+a#hover:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -33,7 +35,7 @@ a:before {
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0.2s;
 }
-a:hover:before {
+a#hover:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
@@ -43,7 +45,6 @@ a:hover:before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
   height: 100vh;
   font-family: "Inter", sans-serif;
 }
