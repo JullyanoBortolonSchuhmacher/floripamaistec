@@ -1,5 +1,3 @@
-@import "./paleta.css";
-
 header{
   display: flex;
   justify-content: space-around;
@@ -7,38 +5,6 @@ header{
   font-family: "Comfortaa", sans-serif;
   color: var(--accent);
   margin: 1em;
-}
-.h1header {
-  color: var(--accent);
-}
-nav{
-  display: flex;
-  gap: 2em;
-}
-
-a {
-  position: relative;
-  text-decoration: none;  
-  cursor: pointer;
-}
-a#hover:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--accent);
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0.2s;
-}
-a#hover:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
 }
 
 .container {
