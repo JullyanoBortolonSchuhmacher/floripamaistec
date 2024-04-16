@@ -1,8 +1,23 @@
-@import "./paleta.css";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:wght@100..900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   cursor: default;
+}
+
+:root {
+  --bg: #151515;
+  --bg2: #101010;
+  --text: #fff;
+  --primary: #7c6af1;
+  --secondary: #BF6AF1;
+  --accent: #6A9BF1;
+  --error: #ff6767;
+  --acert: #8bff8b;
+}
+
+.container {
+  padding-top: 4em;
 }
