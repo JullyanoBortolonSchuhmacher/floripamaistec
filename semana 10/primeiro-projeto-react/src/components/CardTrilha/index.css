@@ -56,3 +56,9 @@
   transition: all .3s ease;
   border: var(--acert) 2px solid;
 }
+
+.spanError {
+  color: var(--error);
+  border-bottom: 1px solid var(--error);
+  cursor: not-allowed;
+}
