@@ -1,0 +1,64 @@
+
+*{
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card_container {
+  display: flex;
+  height: 13em;
+  color: white;
+  margin: .5rem;
+  overflow: hidden;
+}
+.card_container h3{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.card_container p, span{
+  margin: .5em 1em;
+  
+}
+.card_container span{
+  padding: 5px;
+  border: var(--accent) .2em solid;
+  border-radius: 16em;
+}
+.card_container span:hover{
+  border: var(--primary) .2em solid;
+  transition: border .4s ease .1s;
+}
+
+.card_imagem {
+  background-position: center;
+  width: 250px;
+  object-fit: cover;
+}
+
+#favoritar{
+  border: none;
+  cursor: pointer;
+  background: var(--bg2);
+  padding: 5px;
+  border-radius: 16em;
+  border: var(--secondary) .1em solid;
+}
+#favoritar:hover {
+  transform: scale(-1.2, 1.2);
+  transition: transform .3s ease .2s;
+  border: var(--accent) .1em solid;
+}
+#favoritar:active {
+  color: #000;
+  background: var(--primary);
+  transform: scale(-0.8, 0.8);
+  transition: all .3s ease;
+  border: var(--acert) 2px solid;
+}
+
+.spanError {
+  color: var(--error);
+  border-bottom: 1px solid var(--error);
+  cursor: not-allowed;
+}
