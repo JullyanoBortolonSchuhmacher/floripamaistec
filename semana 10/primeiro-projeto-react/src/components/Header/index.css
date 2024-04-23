@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    gap: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    &:hover {
+        color: var(--primary);
+        transform: scale(1.2);
+        transition: all .3s cubic-bezier(1, 0, 0, 1);
+    }
+    &:active{
+        transform: scale(0.8);
+        transition: all .3s cubic-bezier(1, 0, 0, 1);
+    }
+}
