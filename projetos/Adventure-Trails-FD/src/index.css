@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:wght@100..900&display=swap");
+
+html {
+ scroll-behavior: smooth;
+}
+* {
+ background: none;
+}
+* {
+ font-family: "Inter", sans-serif;
+ &::selection {
+  background: var(--accent);
+  color: var(--text);
+ }
+ &::-moz-selection {
+  background: var(--accent);
+  color: var(--text);
+ }
+ &::-webkit-scrollbar {
+  width: 10px;
+ }
+ &::-webkit-scrollbar-track {
+  background: var(--bg);
+ }
+ &::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+ }
+}
+
+:root {
+ --bg: #151515;
+ --bg2: #101010;
+ --text: #fff;
+ --primary: #5740e9;
+ --secondary: #bf6af1;
+ --accent: #6a9bf1;
+ --error: #ff6767;
+ --acert: #8bff8b;
+}

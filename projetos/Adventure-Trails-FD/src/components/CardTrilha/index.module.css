@@ -1,0 +1,73 @@
+.cardContainer {
+ background: rgba(255, 255, 255, 0.05);
+ color: white;
+ border-radius: 24px;
+ margin: 5%;
+ display: grid;
+ grid-template-columns: auto auto;
+ align-items: center;
+}
+
+.nameTrilha {
+ color: var(--primary);
+ align-items: baseline;
+ display: grid;
+ grid-template-columns: auto auto auto auto;
+ gap: 0.5em;
+ margin: 0.2em;
+}
+
+.cardImagem {
+ background-position: center;
+ width: 11em;
+ object-fit: cover;
+ border-radius: 16px;
+ margin: 1em;
+}
+
+.cardSobre {
+ margin: 0.5em 1em;
+ display: grid;
+}
+
+.dificuldadeTrilha {
+ display: grid;
+ justify-content: center;
+ padding: 0.5em 1em;
+ border-radius: 16px;
+ background: var(--accent);
+}
+
+@media (max-width: 600px) {
+ * {
+  font-size: 1em;
+ }
+ .cardContainer {
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto;
+ }
+ .cardContent {
+  width: 70%;
+  display: grid;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+ }
+ .nameTrilha {
+  color: var(--primary);
+  align-items: baseline;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 0.5em;
+  margin: 1em;
+ }
+ .cardImagem {
+  width: 10em;
+  border-radius: 16px;
+  margin: 1em;
+ }
+ .cardSobre {
+  margin-top: -5em;
+ }
+}
