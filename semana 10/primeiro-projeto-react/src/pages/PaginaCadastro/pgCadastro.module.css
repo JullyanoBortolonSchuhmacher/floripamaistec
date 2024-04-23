@@ -1,0 +1,49 @@
+/* body {
+ margin-top: 10rem;
+ background: none;
+}
+
+@media (max-width: 600px) {
+ form {
+  display: grid;
+  grid-template-columns: auto;
+ }
+}
+.container {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+form {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2.5em;
+}
+
+label {
+ font-family: "Comfortaa", sans-serif;
+ font-size: 1.2em;
+}
+input {
+ margin-bottom: 1.5rem;
+ padding: 1em;
+ border: none;
+ border-radius: 16rem;
+ background: #202020;
+}
+
+.btnSubmit {
+ align-items: center;
+ margin-top: 1.5rem;
+ font-family: "Comfortaa", sans-serif;
+ font-size: 1.2em;
+ grid-column: span 2;
+ background-color: var(--primary);
+ color: #fff;
+ border: none;
+ padding: 1em 1.5em;
+ border-radius: 16px;
+ cursor: pointer;
+} */

@@ -1,0 +1,28 @@
+@import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css');
+
+footer{
+    bottom: 0;
+    /* width: 100%; */
+    margin-left: -2em;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 3%;
+    margin-top: 8%;
+    margin-left: 2%;
+}
+
+.fi{
+    margin-left: 10px;
+} 
+
+.vltTopo {
+    /* position: fixed; */
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
