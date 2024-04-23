@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./pgInicial.module.css";
 import Footer from "../../components/Footer";
+import imgTrilha from "../../assets/imagem-trilha.jpg";
 
 function PaginaInicial() {
  return (
@@ -32,12 +33,18 @@ function PaginaInicial() {
      detalhadas sobre cada trilha, incluindo distância, dificuldade, pontos de
      interesse naturais e dicas úteis para uma experiência eco-friendly.
     </p>
-    <img href="../../assets/images/trekking.jpg" width={200} />
     <Link to="/trilhas">
-     <button>Explorar trilhas</button>
+     <button className={styles.btnExplorar}>Explorar trilhas</button>
     </Link>
-    <Footer />
    </div>
+   <div className={styles.content}>
+    <h3>Compartilhe fotos, dicas e localização das suas trilhas favoritas</h3>
+    <img src={imgTrilha} width={200}/>
+    <Link to="/cadastro">
+     <button className={styles.btnExplorar}>Cadastre trilhas</button>
+    </Link>
+   </div>
+    <Footer />
   </>
  );
 }
