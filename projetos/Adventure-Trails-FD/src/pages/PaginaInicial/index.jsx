@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./pgInicial.module.css";
 import Footer from "../../components/Footer";
-import imgTrilha from "../../assets/imagem-trilha.jpg";
+import imgTrilha from "../../assets/exemplo-trilha.jpg";
 
 function PaginaInicial() {
  return (
@@ -37,12 +37,15 @@ function PaginaInicial() {
      <button className={styles.btnExplorar}>Explorar trilhas</button>
     </Link>
    </div>
-   <div className={styles.content}>
-    <h3>Compartilhe fotos, dicas e localização das suas trilhas favoritas</h3>
-    <img src={imgTrilha} width={200}/>
+    <hr/>
+   <div className={styles.content2column}>
+    <div className={styles.content2text}>
+    <h1>Compartilhe fotos, dicas e localização das suas trilhas favoritas</h1>
     <Link to="/cadastro">
      <button className={styles.btnExplorar}>Cadastre trilhas</button>
     </Link>
+    </div>
+    <img src={imgTrilha}/>
    </div>
     <Footer />
   </>
