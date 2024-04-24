@@ -1,0 +1,23 @@
+body {
+ margin-top: 8rem;
+ margin-bottom: 5%;
+ background: var(--bg);
+ color: var(--text);
+}
+
+@media (max-width: 600px) {
+ .card_Container {
+  display: grid;
+  grid-template-columns: auto;
+ }
+ header {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+ }
+}
+
+.titulo {
+ display: flex;
+ font-size: 1.8em;
+ justify-content: center;
+}

@@ -5,12 +5,10 @@ import { TrilhasContextProvider } from "./context/TrilhasContext";
 
 function App() {
  return (
-  <>
-   <TrilhasContextProvider>
-    <Header />
-    <Outlet />
-   </TrilhasContextProvider>
-  </>
+  <TrilhasContextProvider>
+   <Header />
+   <Outlet />
+  </TrilhasContextProvider>
  );
 }
 

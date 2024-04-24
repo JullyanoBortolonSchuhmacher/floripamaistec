@@ -32,13 +32,9 @@ html {
  --bg: #151515;
  --bg2: #101010;
  --text: #fff;
- --primary: #7c6af1;
+ --primary: #5740e9;
  --secondary: #bf6af1;
  --accent: #6a9bf1;
  --error: #ff6767;
  --acert: #8bff8b;
-}
-
-.container {
- padding-top: 4em;
 }
