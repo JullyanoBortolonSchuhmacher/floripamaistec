@@ -12,9 +12,9 @@
  * 7 - [x] - CRIE O JSX DO PROVIDER E PASSE OS DADOS GLOBAIS NA PROP value
  * 8 - [x] - IMPORTE O PROVIDER NO ARQUIVO APP.JSX
  *
- * 9 - [] - IMPORTE O CONTEXTO NO ARQUIVO QUE FOR UTILIZAR
- * 10 - [] - IMPORTE O useContext DO REACT
- * 11 - [] - RECEBA OS DADOS GLOBAIS USANDO O useContext
+ * 9 - [X] - IMPORTE O CONTEXTO NO ARQUIVO QUE FOR UTILIZAR
+ * 10 - [X] - IMPORTE O useContext DO REACT
+ * 11 - [X] - RECEBA OS DADOS GLOBAIS USANDO O useContext
  */
 
 import { createContext, useState, useEffect } from "react";
