@@ -1,0 +1,14 @@
+{
+  "name": "semana01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "imc": "node calcular_imc.js",
+    "media": "node media_alunos.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,72 @@
+
+            <!DOCTYPE html>
+              <html lang="en">
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>perfil usuário</title>
+              </head>
+              <body>
+                <style>
+                  * {
+                  font-family: "poppins", sans-serif; 
+                  font-size: 1.3rem;
+                  color: #fff;
+                  text-decoration: none;
+                  transition: .3s;
+                  gap: 3ch;
+                }
+                body {
+                  display: flex; 
+                  flex-direction: column; 
+                  justify-content: center; 
+                  align-items: center;
+                  padding-top: 5%;
+                  background: #222;
+                }
+                img {
+                  border-radius: 50%;
+                  width: 13rem;
+                  border: 1px solid #fff;
+                }
+                a:hover {
+                    transform: scale(0.8);
+                  }
+                  div {
+                    display: grid;
+                    grid-auto-columns: auto;
+                    grid-template-columns: repeat(1, 1fr);
+                    align-items: center;
+                  }
+  
+                  @media screen and (min-width: 768px) {
+                    * {
+                      gap: 1rem;
+                    }
+                    div {
+                      grid-template-columns: repeat(2, 1fr);
+                    }
+                  }
+                  span {
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                    padding-inline: 4rem;
+                    padding-block: 1rem;
+                    border-radius: 16rem;
+                    background: #191919;
+                    box-shadow: .2em .2em 1em #111;
+                  }            
+              </style>
+              <h1>João Antunes</h1>
+              <img src="https://avatars.githubusercontent.com/u/1041?v=4" alt="avatar_perfil">
+                <a href="https://github.com/joao">\ Visite o perfil aqui</a>
+                <div>
+                  <span> Biografia: Software designer </span>
+                  <span> Local de Trabalho: @numero </span>
+                  <span> Repositórios: 30 </span>
+                  <span> Seguidores: 73 </span>
+                  <span> Seguindo: 0 </span>
+                </div>
+              </body>     
+              </html>
+            
