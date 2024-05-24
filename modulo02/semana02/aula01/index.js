@@ -90,3 +90,48 @@ console.log(filmesOrdenados)
 // reverse -> inverte a ordem dos elementos no array
 let filmesInvertidos = filmes.reverse()
 console.log(filmesInvertidos)
+
+// definindo um objeto
+const pessoa = {
+    nome: 'João',
+    idade: 31,
+    profissao: 'Engenheiro',
+    cidade: 'Florianópolis'
+}
+
+const propriedades = ["nome", "idade", "profissao", "cidade"]
+propriedades.forEach((propriedade) => {
+    console.log(pessoa[propriedade])
+    // se existir essa propriedade no objeto pessoa,
+    //ira mostrar no console o valor
+})
+
+// modificando propriedades do Objeto
+pessoa.idade = 28
+// pessoa["idade"] = 42
+console.log(pessoa.idade)
+
+// removendo propriedades do objeto
+delete pessoa.cidade
+console.log(pessoa)
+
+// chave dinâmica
+const prefixo = "item"
+const produtos = ["livro", "caderno", "caneta"]
+
+// devolvendo um novo array para ele
+// const produto = produtos.map((prod, indice) => {
+//     // return {[prefixo + indice]: prod} // começa com 0
+//     return {[prefixo + ++indice]: prod} // começa com 1 
+// })
+
+// console.log(produto)
+
+
+// criando propriedades dinamicamente
+const propriedades1 = ["nome", "idade", "profissao"]
+
+const usuarios = [
+    ["Pedro", 28, "dev"]
+    ["Luiz", 28, "QA"]
+]
