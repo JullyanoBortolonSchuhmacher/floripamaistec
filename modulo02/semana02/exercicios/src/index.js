@@ -63,3 +63,13 @@ console.log(contador1());
 let contador2 = contador();
 console.log(contador2());
 console.log(contador2());
+
+console.log("_________________________________________________")
+// _________________________________________________(Exercicio 05)
+function calcularProduto(valores) {
+  const soma = valores.reduce((valor, valorTotal) => valor * valorTotal, 1)
+  return soma
+}
+  
+  let valores = [1, 2, 3, 4, 5, 6];
+  console.log(calcularProduto(valores));
