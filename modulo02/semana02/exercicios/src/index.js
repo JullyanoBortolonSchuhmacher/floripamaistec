@@ -87,3 +87,27 @@ function dobrar(numero) {
 
 console.log(transformarArray(valores, dobrar)); // --> reutilizando a variavel "valores" <- exercicio 05👍 
 console.log(transformarArray(numeros, dobrar)); // --> reutilizando a variavel "numeros" <- exercicio 01 👍 
+
+console.log("_________________________________________________")
+// _________________________________________________(Exercicio 07)
+function compor(f, g) {
+  return function(x){
+    const resultadoG = g(x)
+    const resultadoF = f(resultadoG)
+    return resultadoF
+  }
+}
+
+function somar1(x) {
+  return x + 1;
+}
+
+function multiplicar2(x) {
+  return x * 2;
+}
+
+let funcaoComposta = compor(somar1, multiplicar2);
+// usando o array de numero para 
+let numero = numeros[4]
+console.log(funcaoComposta(numero)); 
+
