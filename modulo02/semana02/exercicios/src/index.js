@@ -71,5 +71,19 @@ function calcularProduto(valores) {
   return soma
 }
   
-  let valores = [1, 2, 3, 4, 5, 6];
-  console.log(calcularProduto(valores));
+let valores = [1, 2, 3, 4, 5, 6];
+console.log(calcularProduto(valores));
+
+console.log("_________________________________________________")
+// _________________________________________________(Exercicio 06)
+
+function transformarArray(array, transformacao) {
+  return array.map(transformacao)
+}
+
+function dobrar(numero) {
+  return numero * 2;
+}
+
+console.log(transformarArray(valores, dobrar)); // --> reutilizando a variavel "valores" <- exercicio 05👍 
+console.log(transformarArray(numeros, dobrar)); // --> reutilizando a variavel "numeros" <- exercicio 01 👍 
