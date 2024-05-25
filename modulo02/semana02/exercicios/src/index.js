@@ -26,8 +26,6 @@ let pessoas = [
 // console.log(pessoas)
 console.log(filtrarIdadeAdultos(pessoas));
 
-console.log("_________________________________________________")
-// _________________________________________________(Exercicio 03)
 function calcularValorTotalPorCategoria(produtos) {
   return produtos.reduce((valorFinal, produto) => {
     const { categoria, valor } = produto;
@@ -46,3 +44,22 @@ const produtos = [
 ];
 
 console.log(calcularValorTotalPorCategoria(produtos));
+
+console.log("_________________________________________________")
+// _________________________________________________(Exercicio 04)
+function contador() {
+  let conta = 0
+  return function() {
+    conta++
+    return conta
+  }
+}
+
+let contador1 = contador();
+console.log(contador1());
+console.log(contador1());
+console.log(contador1());
+
+let contador2 = contador();
+console.log(contador2());
+console.log(contador2());
