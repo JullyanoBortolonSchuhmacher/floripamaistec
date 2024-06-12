@@ -35,7 +35,7 @@ delete from pedidos
 where valor < 150.00;
 
 -- exercicio 03 ______________________________________________
--- seleciona os cliente de São Paulo
+-- lista os cliente de São Paulo
 select *
 from clientes
 where cidade = 'São Paulo';
@@ -58,7 +58,7 @@ where nome like 'A%'
 -- calcula o valor de pedidos para cada cliente
 select clientes.cliente_id,  clientes.nome,  sum(pedidos.valor) as total_pedidos
 from clientes
-join pedidos p on clientes.cliente_id = pedidos.cliente_id
+join pedidos on clientes.cliente_id = pedidos.cliente_id
 group by clientes.cliente_id, clientes.nome
 
 -- exercicio 05 ______________________________________________
@@ -68,7 +68,6 @@ from pedidos
 inner join clientes on pedidos.cliente_id = clientes.cliente_id;
 
 -- consulta todos os pedidos até quem não fez
-
 select *
 from clientes
 left join pedidos on clientes.cliente_id = pedidos.cliente_id;
@@ -88,12 +87,13 @@ union
 -- exercicio 06 ______________________________________________
 --encontra o total em cada mês
 select
-  date_trunc('month', ip.data_pedido) as mes,
-  sum(ip.quantidade) as total_itens
+  DATE_TRUNC('month', pedidos.data_pedido) as mes,
+  SUM(itens_pedidos.quantidade) as total_itens
 
-from itens_pedidos ip
+from pedidos
+join itens_pedidos on pedidos.pedido_id = itens_pedidos.pedido_id
 group by mes
-order by mes
+order by mes;
 
 -- lista os clientes sem pedidos
 select *
@@ -105,11 +105,11 @@ where pedidos.pedido_id is null
 select *
 from pedidos
 order by valor desc
-limit 1 -- a partir de 1
+limit 1 -- limita a 1
 
--- busca o totalde pedido por produto
+-- busca o total de pedido por produto
 select 
-  produtos.pedido_id, 
+  produtos.produto_id,
   produtos.nome_produto,
   coalesce(sum(itens_pedidos.quantidade), 0) as total_itens_pedidos
 
@@ -118,44 +118,40 @@ left join itens_pedidos on produtos.produto_id = itens_pedidos.produto_id
 group by 
   produtos.produto_id,
   produtos.nome_produto
-
-order by produtos.pedido_id
+order by produtos.produto_id;
 
 --calcula a soma do valor dos pedidos por cliente que fez mais que 1 pedido
 select
   pedidos.cliente_id,
   clientes.nome,
-  count(p.pedido_id) AS total_pedidos,
-  sum(pedidos.valor) AS total_valor_pedidos
-
+  count(pedidos.pedido_id) as total_pedidos,
+  sum(pedidos.valor) as total_valor_pedidos
 from pedidos
 join clientes on pedidos.cliente_id = clientes.cliente_id
 group by 
-  pedidos.cliente_id
+  pedidos.cliente_id,
   clientes.nome
 
 having count(pedidos.pedido_id) > 1
 
 --encontra a media de produto por categoria
 select 
-  produtos.categoria_id,
-  AVG(produtos.preco) AS preco_medio,
-  categorias.nome_categoria
+  categoria_id,
+  avg(preco) as preco_medio
 
 from produtos
-join categorias ON produtos.categoria_id = categorias.categoria_id
-group by 
-  produtos.categoria_id,
-  categorias.nome_categoria;
+group by categoria_id;
 
 -- Encontra o cliente que pediu o mais caro
 select 
-  c.cliente_id,
-  c.nome,
-  MAX(p.valor) AS maior_valor_pedido
+  clientes.cliente_id,
+  clientes.nome,
+  pedidos.valor as maior_valor_pedido
 
-from clientes c
-join pedidos p ON c.cliente_id = p.cliente_id;
+from clientes
+join pedidos on clientes.cliente_id = pedidos.cliente_id
+order by pedidos.valor desc
+limit 1
 
 -- exercicio 07 ______________________________________________
 
@@ -172,7 +168,13 @@ where
     having sum(valor) > 300.00
   );
 
--- Subconsulta: Lista os produtos que foram pedidos novamente
+-- Subconsulta
+-- Inserido dados pra teste
+NSERT INTO itens_pedidos (pedido_id, produto_id, quantidade) VALUES
+(2, 1, 1),  -- Produto A
+(3, 2, 1);  -- Produto B
+
+--Lista os produtos que foram pedidos novamente
 select *
 from produtos
 where
