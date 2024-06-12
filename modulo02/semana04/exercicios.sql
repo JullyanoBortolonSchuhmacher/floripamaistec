@@ -170,8 +170,8 @@ where
 
 -- Subconsulta
 -- Inserido dados pra teste
-NSERT INTO itens_pedidos (pedido_id, produto_id, quantidade) VALUES
-(2, 1, 1),  -- Produto A
+insert into itens_pedidos (pedido_id, produto_id, quantidade) values
+(2, 1, 2),  -- Produto A
 (3, 2, 1);  -- Produto B
 
 --Lista os produtos que foram pedidos novamente
