@@ -12,4 +12,6 @@ create table categorias (
 
 também deixei em minusculas, por mais que não seja a boa pratica, foi a forma pratica para realizar.
 
-# Não terminado
+# ~Não~ Terminado -
+
+12/06/2024 - Jullyano 
