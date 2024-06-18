@@ -87,6 +87,8 @@ union
 -- exercicio 06 ______________________________________________
 --encontra o total em cada mês
 select
+  date_trunc('month', itens_pedidos.data_pedido) as mes,
+  sum(itens_pedidos.quantidade) as total_itens
 
 from pedidos
 join itens_pedidos on pedidos.pedido_id = itens_pedidos.pedido_id
