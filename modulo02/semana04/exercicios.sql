@@ -87,8 +87,6 @@ union
 -- exercicio 06 ______________________________________________
 --encontra o total em cada mês
 select
-  DATE_TRUNC('month', pedidos.data_pedido) as mes,
-  SUM(itens_pedidos.quantidade) as total_itens
 
 from pedidos
 join itens_pedidos on pedidos.pedido_id = itens_pedidos.pedido_id
