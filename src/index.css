@@ -1,0 +1,40 @@
+:root {
+    /* Tema claro */
+    --l-bg: #f5f5f5;
+    --l-bg-secondary: #e0e0e0;
+    --l-text: #333333;
+    --l-text-secondary: #666666;
+    --l-accent: #4caf50;
+    --l-accent-hover: #43a047;
+
+    /* Tema escuro */
+    --d-bg: #121212;
+    --d-bg-secondary: #1f1f1f;
+    --d-text: #f5f5f5;
+    --d-text-secondary: #b3b3b3;
+    --d-accent: #4caf50;
+    --d-accent-hover: #66bb6a;
+
+    /* Tema (variaveis genéricas) */
+    --background: var(--l-bg);
+    --background-s: var(--l-bg-secondary);
+    --text: var(--l-text);
+    --text-secondary: var(--l-text-secondary);
+    --accent: var(--l-accent);
+    --accent-hover: var(--l-accent-hover);
+}
+
+:root:has(#selcTema option[value="dark"]:checked) {
+    --background: var(--d-bg);
+    --bg-secondary: var(--d-bg-secondary);
+    --text: var(--d-text);
+    --text-secondary: var(--d-text-secondary);
+    --accent: var(--d-accent);
+    --accent-hover: var(--d-accent-hover);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: sans-serif, Inter;
+}
